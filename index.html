@@ -56,6 +56,9 @@
             </ul>
         </div>
         <div class="right-container">
+            <div class="section-title">
+                <h2>About</h2>
+            </div>
             <div id="about">
                 <p class="mb-4">
                     I got into web development and software engineering during college, where I really got into <span class="text-bold"> Python and Django.</span> Since then, I've built up my skills as a <span class="text-bold">Fullstack Developer</span>, finding a lot of satisfaction in combining technology with problem-solving. During my time as an intern at <span class="text-bold">Bitlance Tech Hub</span>, I handled backend tasks for a tourist management project, which was a great learning experience.
@@ -67,6 +70,9 @@
                 <p>
                     When I'm not working, you'll find me playing chess, keeping up with the latest tech trends, or working on ways to solve complex problems more effectively. I'm <span class="text-bold">always learning and trying to stay ahead</span> in the fast-paced world of software development.
                 </p>
+            </div>
+            <div class="section-title">
+                <h2>Education</h2>
             </div>
             <div id="education">
                 <div class="info-card box-shadow">
@@ -96,6 +102,9 @@
                         <p>10th Grade - Maharashtra State Board</p>
                     </div>
                 </div>
+            </div>
+            <div class="section-title">
+                <h2>Projects</h2>
             </div>
             <div id="projects">
                 <div class="project-card box-shadow">
@@ -165,8 +174,8 @@
             )`;
         });
         
-           // Function to handle link clicks
-           function handleLinkClick(event, sectionId, linkId) {
+        // Function to handle link clicks
+        function handleLinkClick(event, sectionId, linkId) {
             event.preventDefault();
             
             // Scroll to the specified section
@@ -181,21 +190,21 @@
                 link.classList.remove('active');
                 link.classList.add('inactive');
             });
-
+            
             // Add 'active' class to the clicked link
             document.getElementById(linkId).parentElement.classList.remove('inactive');
             document.getElementById(linkId).parentElement.classList.add('active');
         }
-
+        
         // Event listeners for links
         document.getElementById('about-link').addEventListener('click', function(event) {
             handleLinkClick(event, 'about', 'about-link');
         });
-
+        
         document.getElementById('education-link').addEventListener('click', function(event) {
             handleLinkClick(event, 'education', 'education-link');
         });
-
+        
         document.getElementById('projects-link').addEventListener('click', function(event) {
             handleLinkClick(event, 'projects', 'projects-link');
         });
